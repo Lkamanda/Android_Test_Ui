@@ -1,0 +1,5 @@
+2020-03-18 14:47:10,188 - C:/Users/15992/PythonProject/Test_Ui_Android/log/test_log/testlog.py[line:38] - DEBUG: debug
+2020-03-18 14:47:10,188 - C:/Users/15992/PythonProject/Test_Ui_Android/log/test_log/testlog.py[line:39] - INFO: info
+2020-03-18 14:47:10,188 - C:/Users/15992/PythonProject/Test_Ui_Android/log/test_log/testlog.py[line:40] - WARNING: 警告
+2020-03-18 14:47:10,188 - C:/Users/15992/PythonProject/Test_Ui_Android/log/test_log/testlog.py[line:41] - ERROR: 报错
+2020-03-18 14:47:10,188 - C:/Users/15992/PythonProject/Test_Ui_Android/log/test_log/testlog.py[line:42] - CRITICAL: 严重
