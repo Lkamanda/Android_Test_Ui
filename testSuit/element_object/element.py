@@ -1,7 +1,7 @@
 # @Time       :      2020/3/19 21:57
 # @Description: 封装定为页面元素
 from common.my_test import MyTest
-
+from appium.webdriver.common.touch_action import TouchAction
 
 class Element(MyTest):
 
@@ -40,9 +40,20 @@ class Element(MyTest):
         """
         return self.driver.press_keycode(AndroidKeyCode)
 
+    # 未能调通
     def set_network(self, bitmask):
         # 设置网络
         return self.driver.set_network_connection(bitmask)
+
+    def action_func(self):
+        """
+        action.xx
+
+        :return: action 对象
+        """
+        action = TouchAction(self.driver)
+        return action
+
 
     # driver.contexts 获取所有上下文
     # driver.current_context  获取当前上下文

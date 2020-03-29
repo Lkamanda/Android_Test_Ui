@@ -41,5 +41,9 @@ class TestHome(Element):
         self.get_id('com.ss.android.article.news:id/csp').send_keys(text)
         self.get_id('com.ss.android.article.news:id/cm6').click()
         time.sleep(3)
+
+    # def test3(self):
+    #
+
 if __name__ == '__main__':
     unittest.main()

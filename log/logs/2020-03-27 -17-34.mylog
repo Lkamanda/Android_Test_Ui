@@ -1,0 +1,5 @@
+2020-03-27 17:34:36,272 - C:\Users\15992\PythonProject\Android_Test_Ui\common\Driver.py[line:57] - INFO: 链接成功
+2020-03-27 17:34:36,302 - C:\Users\15992\PythonProject\Android_Test_Ui\common\my_test.py[line:12] - DEBUG: 整个测试类初始化完成
+2020-03-27 17:34:39,772 - C:\Users\15992\PythonProject\Android_Test_Ui\common\my_test.py[line:16] - DEBUG: 每个测试用例初始化
+2020-03-27 17:34:49,802 - C:\Users\15992\PythonProject\Android_Test_Ui\common\my_test.py[line:20] - DEBUG: 每个测试用列结束清楚环境
+2020-03-27 17:34:50,657 - C:\Users\15992\PythonProject\Android_Test_Ui\common\my_test.py[line:25] - DEBUG: 整个测试类清楚环境

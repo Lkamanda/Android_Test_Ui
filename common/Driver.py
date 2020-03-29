@@ -43,10 +43,10 @@ class MyDriver(object):
             "deviceName": get_deviceName(),
             "platformName": "Android",
             "PlatfromVersion": get_platformVersion(),
-            "appPackage": "com.ss.android.article.news",
-            # "appPackage": "com.sogou.novel",
-            "appActivity": "com.ss.android.article.news.activity.MainActivity",
-            # "appActivity":"com.sogou.novel.home.SplashActivity",
+            # "appPackage": "com.ss.android.article.news",
+            "appPackage": "com.sogou.novel",
+            # "appActivity": "com.ss.android.article.news.activity.MainActivity",
+            "appActivity":"com.sogou.novel.home.SplashActivity",
             "noReset": True,  # 是否重置app
             "unicodeKeyboard": True,
             "newCommandTimeout": "120",  # 设置未接受命令超时时间，driver关闭时间
