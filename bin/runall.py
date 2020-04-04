@@ -5,7 +5,6 @@ from common.custom import gsb
 import os, time
 from common.send_email import send_mail_html
 
-
 class Runner(object):
     def __init__(self):
         self.gsb = gsb()
@@ -16,6 +15,7 @@ class Runner(object):
         #print(self.testReport_root)
         self.log_root = '{0}{1}log{1}logs{1}'.format(self.gPath, self.gsb)
         #print(self.log_root)
+
 
     def get_suit(self):
         suit = unittest.TestLoader().discover(
@@ -33,13 +33,15 @@ class Runner(object):
             title='test report',
             description='自动化测试报告'
         )
-        suit= self.get_suit()
-        runner.run(suit)
+        # suit= self.get_suit()
+        # runner.run(suit)
         # send email
         # send_mail_html(self.testReport_root)
 
 
 if __name__ == '__main__':
     run = Runner()
-    # print(time.strftime("%Y-%m-%d %H-%M-%S"))
+    # print(time.strftime("%Y-%m-%d %H-%M-%S", time.localtime()))
     run.my_run()
+
+
