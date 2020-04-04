@@ -25,4 +25,4 @@ class ReadConfig(object):
 
 if __name__ == '__main__':
     con = ReadConfig()
-    print(con.get_config_email('mail_host'))
+    print(con.get_config_email('sender'))
