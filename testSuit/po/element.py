@@ -1,9 +1,12 @@
 # @Time       :      2020/3/19 21:57
 # @Description: 封装定为页面元素
-from common.my_test import MyTest
+
 from appium.webdriver.common.touch_action import TouchAction
 
-class Element(MyTest):
+class Element(object):
+
+    def __init__(self, driver):
+        self.driver =driver
 
     def get_id(self, id):
         #根据id地位页面元素
