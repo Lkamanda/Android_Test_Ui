@@ -1,9 +1,8 @@
 # @Time       :      2020/3/18 3:30
 # @Description: TestHome测试用例类
 
-
 from log.logger import mylog
-from testSuit.element_object.element import Element
+from testSuit.po.element import Element
 import time
 import unittest
 from common.read_excal import ReadExcal
