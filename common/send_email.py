@@ -7,12 +7,13 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
 from log.logger import mylog
 
+
 def send_mail_html(email_dir):
     '''发送html内容邮件，非附件形式，即直接在邮件中显示html'''
     readC = ReadConfig()
     sender = readC.get_config_email('sender')
     receiver = readC.get_config_email('receiver')
-
+    content = readC.get_config_email('content')
     # 发送邮件主题
     t = time.strftime('%Y-%m-%d %H-%M-%S', time.localtime())
     subject = '接口自动化测试结果_' + t
@@ -30,12 +31,14 @@ def send_mail_html(email_dir):
     msg['To'] = receiver
     msg['Subject'] = subject
 
-    # 邮件content
-    file_path,file_name = find_new_file(dir=email_dir)
-    file = r"{}".format(file_path)
-    pureText = MIMEText(open(file, 'rb').read(), 'html', 'utf-8')
+
+
+    # 邮件 内容content
+    pureText = MIMEText(content, 'html', 'utf-8')
     msg.attach(pureText)
 
+    file_path, file_name = find_new_file(dir=email_dir)
+    file = r"{}".format(file_path)
     # 添加邮件附件
     att = MIMEApplication(open(file, 'rb').read())
     # att.add_header('Content-Disposition', 'p_w_upload', file_name='interfaceReport.html')
@@ -49,6 +52,7 @@ def send_mail_html(email_dir):
         mylog.logger.debug('邮件发送成功')
     except Exception as e:
         mylog.logger.debug('邮件发送失败%s'%e)
+
 
 def find_new_file(dir):
     # 将指定目录下文件添加到一个列表中返回
@@ -65,7 +69,7 @@ def find_new_file(dir):
 
 
 if __name__ == '__main__':
-    dir = r"C:\Users\zhoujialin\PycharmProjects\interface\testReport"
+    dir = r"C:\Users\15992\PythonProject\Android_Test_Ui\testReport"
 
     send_mail_html(dir)
 
